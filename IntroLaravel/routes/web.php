@@ -19,10 +19,13 @@ use App\Http\Controllers\ControladorVistas;
 Route::view('/from','formulario')->name('rutaFrom');
 Route::view('/consultar','cliente')->name('rutaClientes'); */
 
-Route::view('/component','componentes')->name('rutacomponent'); 
+// Route::view('/component','componentes')->name('rutacomponent'); 
 
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
 
 Route::get('/from', [ControladorVistas::class, 'formulario'])->name('rutaFrom');
 
 Route::get('/consultar', [ControladorVistas::class, 'consulta'])->name('rutaClientes');
+
+
+Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente'])->name('rutaEnviar');

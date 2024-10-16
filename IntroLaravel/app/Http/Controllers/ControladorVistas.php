@@ -21,7 +21,20 @@ class ControladorVistas extends Controller
 
     public function consulta()
     {
-        return view('clientes'); 
+        return view('cliente'); 
+    }
+
+    public function procesarCliente(Request $peticion)
+    {
+        // return 'si llego la info del cliente : )'; 
+
+        // return $peticion->all();
+
+        // return $peticion->path();
+
+        // return $peticion->url();
+
+        return $peticion->ip();
     }
 
 
