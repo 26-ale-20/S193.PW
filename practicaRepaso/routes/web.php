@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','inicio')->name('rutaInicio');
+Route::view('/','repaso1')->name('rutaRepao1');

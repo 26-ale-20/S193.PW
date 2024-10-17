@@ -16,7 +16,7 @@
         <h2>Jimenez Hernández Verónica Alejandra</h2>
         <h2 >Repaso 1</h2>
         <h3>Programación web</h3>
-        <a href="/from" class="btn btn-danger"> Repaso 1 </a>
+        <a href="{{ route('rutaRepaso1') }}" class="btn btn-danger"> Repaso 1 </a>
        
 </body>
 </html>
