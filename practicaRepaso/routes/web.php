@@ -1,17 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ControladorMensaje;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// Route::view('/','inicio')->name('rutaInicio');
+// Route::view('/','repaso1')->name('rutaRepaso1');
 
-Route::view('/','inicio')->name('rutaInicio');
-Route::view('/','repaso1')->name('rutaRepao1');
+Route::get('/',[ControladorMensaje::class, 'home'])->name('rutaInicio');
+Route::get('/repaso1',[ControladorMensaje::class, 'repaso1'])->name('rutaRepaso1');
+Route::post('/mensaje',[ControladorMensaje::class, 'mensaje'])->name('rutamensaje');
+
