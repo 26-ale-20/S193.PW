@@ -7,8 +7,6 @@
     @vite(['resources/js/app.js'])
 </head>
 
-
-
 <body>
     
  <div class="container mt-5 col-md-6">

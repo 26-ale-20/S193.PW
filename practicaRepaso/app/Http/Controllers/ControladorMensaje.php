@@ -14,8 +14,28 @@ class ControladorMensaje extends Controller
     {
         return view ('repaso1');
     }
-    public function mensaje()
+    public function convertidor(Request $request)
     {
-        return 'se convierte';
+        $valor = $request->input('valor'); 
+        $resultado = $valor * 0.001;
+        return (string)$resultado;
+    }
+    public function convertirGBaMB(Request $request)
+    {
+        $valor = $request->input('valor'); 
+        $resultado = $valor * 1000;
+        return (string)$resultado;
+    }
+    public function convertirGBaTB(Request $request)
+    {
+        $valor = $request->input('valor'); 
+        $resultado = $valor * 0.001;
+        return (string)$resultado;
+    }
+    public function convertirTBaGB(Request $request)
+    {
+        $valor = $request->input('valor'); 
+        $resultado = $valor * 1000;
+        return (string)$resultado;
     }
 }
