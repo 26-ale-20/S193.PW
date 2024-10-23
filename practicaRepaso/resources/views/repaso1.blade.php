@@ -12,6 +12,7 @@
 <h1>Convertidor</h1>
 
 <form action="/enviarmensaje" method="POST">
+    
     <!-- @csrf permite que se envie la informacion, es como clave del POST -->
             @csrf 
             <label for="valor">Convertidor de MB a GB:</label>
