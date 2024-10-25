@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadorCliente;
 
 class ControladorVistas extends Controller
 {
@@ -24,7 +25,7 @@ class ControladorVistas extends Controller
         return view('cliente'); 
     }
 
-    public function procesarCliente(Request $peticion)
+    public function procesarCliente(validadorCliente $peticion)
     {
        // respuesta de redireccion 
 
@@ -42,7 +43,7 @@ class ControladorVistas extends Controller
 
     //se guarda en una variable para darle un valor a la peticion validate que comprueba las condiciones 
 
-    
+
     //comprueba que exista el required 
     $validacion= $peticion->validate([
         'txtnombre'=> 'required|min:4 |max:20 ',
