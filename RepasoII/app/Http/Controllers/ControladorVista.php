@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ControladorVitas extends Controller
+class ControladorVista extends Controller
 {
     
     public function Principal()
@@ -14,7 +14,7 @@ class ControladorVitas extends Controller
 
     public function Registro()
     {
-        return view('registro');
+        return view('resgistro');
     }
 
 
