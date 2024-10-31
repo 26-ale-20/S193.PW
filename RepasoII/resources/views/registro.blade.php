@@ -5,7 +5,8 @@
         Registro de Libros
     </div>
     <div class="card-body text-justify">
-        <form action="" method="">
+        <form action="enviarLibro" method="POST">
+            @csrf
 
             <div class="mb-3">
                 <label for="isbn" class="form-label">ISBN:</label>
@@ -40,6 +41,7 @@
                 <input type="text" class="form-control" name="txtemaildeeditorial" value="{{old('txtemaileditorial')}}">
             </div>
 
+            <button type="submit" class="btn btn-success btn-sm">{{__('Guardar')}}</button>
         </form>
 
     </div>
