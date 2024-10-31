@@ -9,4 +9,4 @@ use App\Http\Controllers\ControladorVitas;
 Route::get('/',[ControladorVitas::class,'principal'])->name('PaginaPrincipal');
 Route::get('/',[ControladorVitas::class,'registro'])->name('PaginaRegistro');
 
-Route::post('/enviarLibro',[ControladorVitas::class,'procesarLibro'])->name('Libro');
+Route::post('/enviarLibro',[ControladorVitas::class,'procesarLibro'])->name('rutaLibro');
