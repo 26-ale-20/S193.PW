@@ -7,8 +7,6 @@
 </head>
 <body>
     <h1> Registro de prendas </h1>
-
-  
     <div class="mb-3">
                         <label for="nombre de prenda" class="form-label">Nombre de prenda :</label>
                         <input type="text" class="form-control" name="txtnombredeprenda" value="{{old('txtnombredeprenda')}}">
@@ -22,10 +20,13 @@
 
                     <div class="mb-3">
                         <label for="cantidad" class="form-label">Cantidad</label>
-                        <input type="numer" class="form-control" name="" value=" {{old('')}}">
+                        <input type="number" class="form-control" name="" value=" {{old('')}}">
                     </div>
 
-                    
+                    <div class="mb-3">
+                        <label for="guardarprenda" class="form-label">Guardar Prenda</label>
+                        <button type="submit" class="btn btn-danger btn-sm">Guardar Prenda</button>
+                    </div>
 
 
 </body>
