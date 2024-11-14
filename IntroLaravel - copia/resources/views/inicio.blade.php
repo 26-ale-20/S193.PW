@@ -21,6 +21,7 @@
         <h1 class="display-1">Bienvenido Turista!</h1>
         <p>Presiona el botón para iniciar....</p>
         <a href="{{ route('rutaFrom') }}" class="btn btn-primary">Ir al Registro</a> 
+     <a href="/from" class="btn btn-danger"> Ir al Registro </a>   
     </div>
 </body>
 </html>
