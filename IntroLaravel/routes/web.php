@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clienteController;
-
+use App\Http\Controllers\ControladorVistas;
 
 // Route::get('/', function () {
 //     return view('inicio');
@@ -25,10 +25,8 @@ Route::view('/consultar','cliente')->name('rutaClientes'); */
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
 
 
-Route::get('/consultar', [ControladorVistas::class, 'consulta'])->name('rutaClientes');
-
-
-Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente'])->name('rutaEnviar');
 
 // rutas para clienteControlador
 Route::get('/cliente/create', [clienteController::class, 'create'])->name('rutaFrom');
+Route::post('/cliente', [clienteController::class, 'store'])->name('rutaEnviar');
+Route::get('/cliente', [clienteController::class, 'index'])->name('rutaClientes');

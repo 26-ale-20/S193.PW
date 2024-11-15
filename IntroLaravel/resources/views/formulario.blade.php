@@ -27,7 +27,7 @@
             <div class="card-header fs-5 text-center text-primary">Registro de Clientes</div>
             <div class="card-body text-justify">
 
-                <form action="/enviarCliente" method="POST">
+                <form action="{{route('rutaEnviar')}}" method="POST">
                     @csrf
 
                     <div class="mb-3">
