@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 @section('contenido')
-<body>
+
     {{-- Inicia navbar --}}
 
     {{-- Inicia tarjetaCliente --}}
@@ -17,7 +17,7 @@
                     <p class="card-text fw-lighter"></p>
                 </div>
                 <div class="card-footer text-muted">
-                    <button type="submit" class="btn btn-warning btn-sm">Actualizar</button>
+                <a href="{{ route('rutaActualizar') }}" class="btn btn-primary">Actualizar</a> 
                     <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                 </div>
             </div>

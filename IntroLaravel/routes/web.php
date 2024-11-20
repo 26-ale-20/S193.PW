@@ -30,3 +30,5 @@ Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
 Route::get('/cliente/create', [clienteController::class, 'create'])->name('rutaFrom');
 Route::post('/cliente', [clienteController::class, 'store'])->name('rutaEnviar');
 Route::get('/cliente', [clienteController::class, 'index'])->name('rutaClientes');
+Route::get('/actualizar', [clienteController::class, 'edit'])->name('rutaActualizar');
+Route::put('/cliente', [clienteController::class, 'update'])->name('rutaActualizar2');
