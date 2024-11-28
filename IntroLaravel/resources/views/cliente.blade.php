@@ -1,8 +1,6 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
-
-<!-- Verificar si existe un mensaje de éxito en la sesión -->
 @if(session('exito'))
     <script> 
         Swal.fire({

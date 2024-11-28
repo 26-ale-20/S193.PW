@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControladorVistas;
+// use App\Http\Controllers\ControladorVistas;
+use App\Http\Controllers\ClienteController;
 
 // Route::get('/', function () {
 //     return view('inicio');
@@ -21,11 +22,12 @@ Route::view('/consultar','cliente')->name('rutaClientes'); */
 
 // Route::view('/component','componentes')->name('rutacomponent'); 
 
-Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
+// Route::get('/from', [ControladorVistas::class, 'formulario'])->name('rutaFrom');
 
-Route::get('/from', [ControladorVistas::class, 'formulario'])->name('rutaFrom');
-
-Route::get('/consultar', [ControladorVistas::class, 'consulta'])->name('rutaClientes');
+// Route::get('/consultar', [ControladorVistas::class, 'consulta'])->name('rutaClientes');
 
 
-Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente'])->name('rutaEnviar');
+// Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente'])->name('rutaEnviar');
+
+Route::get('/', [ClienteController::class, 'home'])->name('rutaInicio');
+Route::resource ('cliente',ClienteController::class);
