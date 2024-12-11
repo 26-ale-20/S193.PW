@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ControladorVistas;
+use App\Http\Controllers\clienteController;
 
-Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
+Route::get('/', [clienteController::class, 'inicio'])->name('rutaInicio');
 
 // rutas para clienteControlador
 Route::get('/cliente/create', [clienteController::class, 'create'])->name('rutaFrom');

@@ -6,15 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class ControladorVistas extends Controller
+class clienteController extends Controller
 {
-    public function index()
+    public function inicio ()
     {
        
-        return view('cliente',compact('consultaclientes')); 
+        return view('incio'); 
     }
 
-    public function store(validadorCliente $request)
+    public function Procesar( Request $peticion)
     {
         DB::table('clientes')->insert([
             "nombre"=>$request->input('txtnombre|4carcter'),
